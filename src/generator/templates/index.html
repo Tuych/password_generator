@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>password generator</title>
+    <link rel="stylesheet" href="{% static  'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+
+    <h1> Password Generator</h1>
+
+    <div class="main">
+
+        <div class="password">
+            <h4>Your password:    {{ password }} </h4>
+        </div>
+
+        <form action="">
+
+            <p> Password Length:
+                <select name="length" >
+                    {% for number in select_numbers %}
+                        {% if number == 12 %}
+                            <option value="{{ number }}" selected >{{ number}}</option>
+                        {% else %}
+                            <option value="{{ number }}" >{{ number}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </p>
+            <input type="checkbox" name="uppercase">Allow Uppercase <br>
+            <input type="checkbox" name="numbers"> Allow Numbers (0-9) <br>
+            <input type="checkbox" name="symbols">Allow Other Symbols ($#+) <br>
+
+            <p> <input type="submit" value="Create Password"> </p>
+        </form>
+
+
+    </div>
+</div>
+</body>
+</html>

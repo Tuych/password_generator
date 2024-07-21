@@ -1,0 +1,25 @@
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 1140px;
+    text-align: center;
+    
+}
+
+.main{
+    text-align: left;
+    font-size: 20px;
+}
+
+.password{
+    background-color: rgb(248, 230, 199);
+    border-radius: 10px;
+    text-align: center;
+    font-style: normal;
+}
