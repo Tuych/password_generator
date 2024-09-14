@@ -6,8 +6,10 @@ def main(request):
     select_numbers = [i for i in range(4, 21)]
     ascii_list = [chr(i) for i in range(97, 123)]
     password = ''
+    length = 12
 
-    length = int(request.GET.get('length'))
+    if request.GET.get('length'):
+        length = int(request.GET.get('length'))
 
     if request.GET.get('uppercase'):
         ascii_list.extend([chr(i) for i in range(65, 91)])

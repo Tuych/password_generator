@@ -14,18 +14,19 @@
     <div class="main">
 
         <div class="password">
-            <h4>Your password:    {{ password }} </h4>
+            <h2>Your password:    {{ password }} </h2>
         </div>
 
-        <form action="">
+        <form action="{% url 'main' %}">
 
             <p> Password Length:
                 <select name="length" >
                     {% for number in select_numbers %}
+                    {{ number }}
                         {% if number == 12 %}
-                            <option value="{{ number }}" selected >{{ number}}</option>
+                            <option value="{{ number }}" selected >{{ number }}</option>
                         {% else %}
-                            <option value="{{ number }}" >{{ number}}</option>
+                            <option value="{{ number }}" >{{ number }}</option>
                         {% endif %}
                     {% endfor %}
                 </select>
